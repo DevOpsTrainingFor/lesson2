@@ -1,0 +1,28 @@
+spring:
+  redis:
+    host: redis
+#  liquibase:
+#    change-log: liquibase/changelog.xml
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: root
+#    url: jdbc:mysql://db:3306/cart
+#  jpa:
+#    generate-ddl: false
+#    show-sql: false
+#    hibernate:
+#      ddl-auto: none
+#      use-new-id-generator-mappings: false
+#      naming:
+#        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+
+cache:
+  ttl:
+    cart: 15m
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
